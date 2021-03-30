@@ -1,0 +1,4 @@
+Name: Ethan Li
+Plans for using Kali: I don't really have 20 GB space available on my laptop, so I think I will just use it on REMOTELAB (I already have that installed for my CHEM class)
+Status of Kali Installation: I followed through the tutorial on how to use Kali on REMOTELAB.
+Observations or concerns: I am not a CS major and my most advanced CS class was only data structures last spring. I am not really familiar with most of the stuff we are setting up, but I think I will be okay in the end! Just need to put myself into it (and follow the large quantity of resources)
