@@ -1,0 +1,30 @@
+CS231 HW 2(?) Due Friday, APR 2nd, 2021
+Ethan Li
+(using MacOS)
+
+1. What's your computer's IP address for its current Internet connection? (Bonus: how can you tell the difference between your Ethernet IP and your wireless IP if you have both connections active?)
+  ipconfig getifaddr en0 for wireless, and ipconfig getifaddr en1 for ethernet connection
+
+2. How can you determine the IP address associated with a given host name?
+  nslookup "hostname"
+
+3. How can you determine the host name(s) associated with a given IP address?
+  nslookup "IP-address"
+
+4. How can you copy a file from one computer to another? Or more to the point, if you create a file on the Kali virtual machine and you want to put it someplace where you can save it, like your your Math/CS account on mantis.mathcs.carleton.edu, how do you go about it from the Kali command-line interface?
+  scp (I tried but failed to understand the details behind this)
+
+5. How can you tell whether there's a process listening on a given port (e.g. port 80 or port 22) on a given host?
+  lsof -nP -iTCP -sTCP:LISTEN | grep <port-number>
+
+6. How can you tell which ports have processes listening on them on a given host?
+  lsof -nP -iTCP -sTCP:LISTEN; OR (not sure which one works best) netstat -p tcp -van | grep '^Proto\|LISTEN'
+
+7. How can you retrieve and save a given web page (say http://google.com/ or http://carleton.edu/) in a file on your system?
+  curl -O <url link> OR wget <the link> -O <filePath>
+
+8. How can you view the HTTP headers sent back from a specified web server when you request one of its pages?
+  curl -IL <url link>
+
+9. [Super bonus question] Is there a command-line-only way to view the HTTP headers that *my* computer sends when I run the commands in the previous two questions?
+  curl -Ivs <url link> > /dev/null : -I (Totally not sure if this is what was expected but...)
